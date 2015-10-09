@@ -8,5 +8,11 @@ get '/' do
 end
 
 post '/analyze' do
-	Analyzer.run(params['text'], params['object'])
+	return Analyzer.run(params['text'], params['object'])
+end
+
+get '/analyze' do
+	content_type :json
+	sentiment = Analyzer.run(params['text'], params['object'])
+  	return { :sentiment => sentiment }.to_json
 end
