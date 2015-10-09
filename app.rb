@@ -8,5 +8,5 @@ get '/' do
 end
 
 post '/analyze' do
-	Analyzer.run(params['text'],'текст')
+	Analyzer.run(params['text'], params['object'])
 end

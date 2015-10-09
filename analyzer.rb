@@ -10,6 +10,7 @@ class Analyzer
 		"Accept" => "text/plain"
 		},
 		parameters: '{"text": "' + text + '","object_keywords":"' + object + '", "output_format": "json"}'
+		puts response.body
 		return response.body['sentiment']
 	end
 
