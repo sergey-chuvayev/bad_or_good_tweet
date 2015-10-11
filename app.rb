@@ -1,7 +1,5 @@
 require 'sinatra'
-require_relative 'analyzer'
 
-require 'sinatra'
 
 get '/' do
 	erb :index
